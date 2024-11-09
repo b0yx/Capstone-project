@@ -3,4 +3,6 @@ from . import views
 
 urlpatterns = [
     path('index/', views.index, name='index'),
+    path('', views.UserSerializer),
+    path('<int:pk>', views.SingleMenuItemView.as_view()),
 ]
